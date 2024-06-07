@@ -7,38 +7,55 @@
         <title>AluraDev</title>
     </head>
     <body class="bg-slate-900">
-        <header class="flex justify-between mt-5 px-6">
-            <div id="logo" class="">
-                <img
-                    class="md:w-44 lg:w-60"
-                    src="assets/images/Logo.svg"
-                    alt=""
-                />
-            </div>
-
-            <search class="justify-between border w-full hidden sm:flex">
-                <form class="w-11/12 border hidden sm:block">
-                    <input placeholder="Pesquisar" class="h-11 w-11/12 rounded-lg bg-slate-700 placeholder:text-white text-white" type="search" id="movie" name="q" />
-                </form>
-
-                <button id="closeBtn" class="hidden"><img class="size-6" src="assets/images/x.svg" alt=""></button>
-            </search>
-
-            <div id="btns" class="flex justify-between w-20 items-center sm:w-fit">
-                <button id="searchBtn" class="sm:hidden">
+        <header class="">
+            <nav class="flex justify-between mt-5 px-6 items-center lg:w-10/12">
+                <div id="logo" class="">
                     <img
-                        class="size-6"
-                        src="assets/images/magGlass.svg"
+                        class="sm:w-44 lg:w-60"
+                        src="assets/images/Logo.svg"
                         alt=""
                     />
-                </button>
+                </div>
 
-                <button class="lg:hidden">
-                    <img class="size-6" src="assets/images/menu.svg" alt="" />
-                </button>
-            </div>
+                <search
+                    class="justify-between w-full hidden sm:flex sm:w-7/12 lg:w-5/12"
+                >
+                    <form class="w-full hidden sm:block">
+                        <input
+                            placeholder="Pesquisar"
+                            class="h-11 w-11/12 rounded-xl bg-slate-700 pl-5 placeholder:font-semibold placeholder:opacity-50 placeholder:text-white text-white lg:h-16"
+                            type="search"
+                            id="movie"
+                            name="q"
+                        />
+                    </form>
 
-            
+                    <button id="closeBtn" class="hidden">
+                        <img class="size-6" src="assets/images/x.svg" alt="" />
+                    </button>
+                </search>
+
+                <div
+                    id="btns"
+                    class="flex justify-between w-20 items-center sm:w-fit"
+                >
+                    <button id="searchBtn" class="sm:hidden">
+                        <img
+                            class="size-6"
+                            src="assets/images/magGlass.svg"
+                            alt=""
+                        />
+                    </button>
+
+                    <button class="lg:hidden">
+                        <img
+                            class="size-6"
+                            src="assets/images/menu.svg"
+                            alt=""
+                        />
+                    </button>
+                </div>
+            </nav>
         </header>
 
         <script type="module" src="/src/ts/main.ts"></script>
