@@ -2,6 +2,7 @@ import "../css/main.css";
 
 const searchBtn = document.querySelector("#searchBtn") as HTMLButtonElement;
 const closeBtn = document.querySelector("#closeBtn") as HTMLButtonElement;
+const searchInput = document.querySelector("#searchInput") as HTMLInputElement;
 
 searchBtn.addEventListener("click", () => {
     document.querySelector("#btns")?.classList.add("hidden");
@@ -13,7 +14,7 @@ searchBtn.addEventListener("click", () => {
     document.querySelector("form")?.classList.remove("hidden");
     closeBtn.classList.remove("hidden")
 
-    document.querySelector("form")?.focus();
+    searchInput.focus()
 })
 
 closeBtn.addEventListener("click", () => {
