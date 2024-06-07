@@ -12,6 +12,8 @@ searchBtn.addEventListener("click", () => {
 
     document.querySelector("form")?.classList.remove("hidden");
     closeBtn.classList.remove("hidden")
+
+    document.querySelector("form")?.focus();
 })
 
 closeBtn.addEventListener("click", () => {
