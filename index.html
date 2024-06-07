@@ -8,21 +8,37 @@
     </head>
     <body class="bg-slate-900">
         <header class="flex justify-between mt-5 px-6">
-            <div class=""><img src="assets/symbles/Logo.svg" alt="" /></div>
+            <div id="logo" class="">
+                <img
+                    class="md:w-44 lg:w-60"
+                    src="assets/images/Logo.svg"
+                    alt=""
+                />
+            </div>
 
-            <div class="flex justify-between w-20 items-center">
-                <button>
+            <search class="justify-between border w-full hidden sm:flex">
+                <form class="w-11/12 border hidden sm:block">
+                    <input placeholder="Pesquisar" class="h-14 w-11/12 rounded-lg bg-slate-700 placeholder:text-white text-white" type="search" id="movie" name="q" />
+                </form>
+
+                <button id="closeBtn" class="hidden"><img class="size-6" src="assets/images/x.svg" alt=""></button>
+            </search>
+
+            <div id="btns" class="flex justify-between w-20 items-center sm:w-fit">
+                <button id="searchBtn" class="sm:hidden">
                     <img
                         class="size-6"
-                        src="assets/symbles/magGlass.svg"
+                        src="assets/images/magGlass.svg"
                         alt=""
                     />
                 </button>
 
-                <button>
-                    <img class="size-6" src="assets/symbles/menu.svg" alt="" />
+                <button class="lg:hidden">
+                    <img class="size-6" src="assets/images/menu.svg" alt="" />
                 </button>
             </div>
+
+            
         </header>
 
         <script type="module" src="/src/ts/main.ts"></script>
