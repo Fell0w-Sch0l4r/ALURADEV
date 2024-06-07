@@ -3,27 +3,49 @@ import "../css/main.css";
 const searchBtn = document.querySelector("#searchBtn") as HTMLButtonElement;
 const closeBtn = document.querySelector("#closeBtn") as HTMLButtonElement;
 const searchInput = document.querySelector("#searchInput") as HTMLInputElement;
+const logo = document.querySelector("#logo") as HTMLDivElement;
+const rightSideBtns = document.querySelector("#btns") as HTMLDivElement;
 
-searchBtn.addEventListener("click", () => {
-    document.querySelector("#btns")?.classList.add("hidden");
-    document.querySelector("#logo")?.classList.add("hidden");
+const searchSection = document.querySelector("search") as HTMLDivElement;
+const searchForm = document.querySelector("search form") as HTMLFormElement;
 
-    document.querySelector("search")?.classList.remove("hidden");
-    document.querySelector("search")?.classList.add("flex");
 
-    document.querySelector("form")?.classList.remove("hidden");
-    closeBtn.classList.remove("hidden")
+searchBtn.addEventListener("click", showSearchBar)
 
-    searchInput.focus()
-})
+closeBtn.addEventListener("click", hideSearchBar)
 
-closeBtn.addEventListener("click", () => {
-    document.querySelector("#btns")?.classList.remove("hidden");
-    document.querySelector("#logo")?.classList.remove("hidden");
 
-    document.querySelector("search")?.classList.add("hidden");
-    document.querySelector("search")?.classList.remove("flex");
+export function addHtmlElementClass(element: HTMLElement, className: string): void{
+    element.classList.add(className)
+}
 
-    document.querySelector("form")?.classList.add("hidden");
-    closeBtn.classList.add("hidden");
-})
+
+export function removeHtmlElementClass(element: HTMLElement, className: string): void {
+    element.classList.remove(className);
+}
+
+
+function showSearchBar(){
+    addHtmlElementClass(rightSideBtns, "hidden");
+
+    addHtmlElementClass(logo, "hidden");
+
+    addHtmlElementClass(searchSection, "flex");
+    removeHtmlElementClass(searchSection, "hidden");
+
+    removeHtmlElementClass(searchForm, "hidden");
+    removeHtmlElementClass(closeBtn, "hidden");
+
+    searchInput.focus();
+}
+
+function hideSearchBar(){
+     removeHtmlElementClass(rightSideBtns, "hidden");
+     removeHtmlElementClass(logo, "hidden");
+
+     removeHtmlElementClass(searchSection, "flex");
+     addHtmlElementClass(searchSection, "hidden");
+
+     addHtmlElementClass(searchForm, "hidden");
+     addHtmlElementClass(closeBtn, "hidden");
+}
